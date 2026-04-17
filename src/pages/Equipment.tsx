@@ -18,7 +18,7 @@ const Equipment = () => (
           {[
             { icon: Wrench, title: "Подбор оборудования", desc: "Профессиональный подбор оборудования под задачи вашего объекта" },
             { icon: Truck, title: "Доставка и монтаж", desc: "Доставка, монтаж и пусконаладочные работы под ключ" },
-            { icon: ShieldCheck, title: "Гарантия и сервис", desc: "Гарантийное и постгарантийное обслуживание поставленного оборудования" },
+            { icon: ShieldCheck, title: "Сервисное обслуживание", desc: "Сервисное обслуживание поставленного оборудования на всём сроке эксплуатации" },
           ].map((item) => (
             <div key={item.title} className="text-center p-6 rounded-xl border bg-background">
               <item.icon className="w-10 h-10 text-primary mx-auto mb-3" />
