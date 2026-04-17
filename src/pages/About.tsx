@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
 import { CheckCircle } from "lucide-react";
+import aboutImg from "@/assets/about.jpg";
 
 const values = [
   "Индивидуальный подход к каждому клиенту",
