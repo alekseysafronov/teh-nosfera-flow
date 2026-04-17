@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { Phone, Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { useTheme } from "@/hooks/use-theme";
 
 const services = [
   { title: "Экспертиза инженерных систем", path: "/services/water-treatment" },
@@ -23,6 +24,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   const isActive = (path: string) => location.pathname === path || location.pathname.startsWith(path + "/");
 
@@ -30,7 +32,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background border-b shadow-sm">
       <div className="container flex items-center justify-between gap-4 py-3">
         <Link to="/" className="flex-shrink-0 flex flex-col items-start">
-          <img src={logo} alt="Техносфера" className="h-16 md:h-20 w-auto" />
+          <img src={logo} alt="Техносфера" className="h-12 md:h-14 w-auto" />
           <span className="mt-1 text-[11px] md:text-xs uppercase tracking-wider text-muted-foreground font-heading font-semibold">
             Обслуживание инженерных систем
           </span>
