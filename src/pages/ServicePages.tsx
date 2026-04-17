@@ -1,41 +1,54 @@
 import Layout from "@/components/Layout";
-import SectionTitle from "@/components/SectionTitle";
 import { CheckCircle } from "lucide-react";
+import waterImg from "@/assets/water-treatment.jpg";
+import ventilationImg from "@/assets/ventilation.jpg";
+import heatingImg from "@/assets/heating.jpg";
+import dockImg from "@/assets/dock-doors.jpg";
+import electricalImg from "@/assets/electrical.jpg";
 
 interface ServicePageProps {
   title: string;
   description: string;
   features: string[];
   details: string;
+  image: string;
 }
 
-const ServicePage = ({ title, description, features, details }: ServicePageProps) => (
+const ServicePage = ({ title, description, features, details, image }: ServicePageProps) => (
   <Layout>
-    <section className="py-16 bg-muted">
-      <div className="container">
-        <SectionTitle title={title} subtitle={description} />
+    <section className="relative py-20 bg-foreground">
+      <div className="absolute inset-0">
+        <img src={image} alt={title} className="w-full h-full object-cover opacity-30" width={1280} height={768} />
+        <div className="absolute inset-0 bg-foreground/60" />
+      </div>
+      <div className="container relative z-10">
+        <h1 className="font-heading font-extrabold text-3xl md:text-4xl text-primary-foreground">{title}</h1>
+        <p className="mt-3 text-primary-foreground/80 max-w-2xl">{description}</p>
       </div>
     </section>
     <section className="py-16">
-      <div className="container max-w-4xl space-y-8">
-        <p className="text-muted-foreground leading-relaxed">{details}</p>
-        <div>
-          <h3 className="font-heading font-bold text-xl mb-4">Что входит в обслуживание:</h3>
-          <ul className="space-y-3">
-            {features.map((f) => (
-              <li key={f} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-muted-foreground">{f}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="bg-accent rounded-xl p-6 border">
-          <h4 className="font-heading font-bold text-lg mb-2">Нужна консультация?</h4>
-          <p className="text-sm text-muted-foreground mb-3">Свяжитесь с нами для бесплатной оценки и расчёта стоимости обслуживания.</p>
-          <a href="tel:+79166568571" className="inline-flex px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground font-heading font-semibold text-sm hover:opacity-90 transition-opacity">
-            +7 (916) 656-85-71
-          </a>
+      <div className="container max-w-5xl grid md:grid-cols-2 gap-10 items-start">
+        <img src={image} alt={title} loading="lazy" width={1280} height={768} className="rounded-xl shadow-md w-full h-auto" />
+        <div className="space-y-6">
+          <p className="text-muted-foreground leading-relaxed">{details}</p>
+          <div>
+            <h3 className="font-heading font-bold text-xl mb-4">Что входит в обслуживание:</h3>
+            <ul className="space-y-3">
+              {features.map((f) => (
+                <li key={f} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-accent rounded-xl p-6 border">
+            <h4 className="font-heading font-bold text-lg mb-2">Нужна консультация?</h4>
+            <p className="text-sm text-muted-foreground mb-3">Свяжитесь с нами для бесплатной оценки и расчёта стоимости обслуживания.</p>
+            <a href="tel:+79166568571" className="inline-flex px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground font-heading font-semibold text-sm hover:opacity-90 transition-opacity">
+              +7 (916) 656-85-71
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -44,6 +57,7 @@ const ServicePage = ({ title, description, features, details }: ServicePageProps
 
 export const WaterTreatment = () => (
   <ServicePage
+    image={waterImg}
     title="Обслуживание очистных сооружений"
     description="Комплексное техническое обслуживание и ремонт систем водоочистки"
     details="Мы обеспечиваем полный цикл обслуживания очистных сооружений: от регулярной диагностики и профилактических работ до капитального ремонта. Наши специалисты работают с системами любой сложности — от локальных очистных до промышленных комплексов водоподготовки."
@@ -61,6 +75,7 @@ export const WaterTreatment = () => (
 
 export const Ventilation = () => (
   <ServicePage
+    image={ventilationImg}
     title="Обслуживание вентиляционных установок"
     description="Сервис приточно-вытяжных систем вентиляции и кондиционирования"
     details="Правильное обслуживание вентиляционных систем — залог здорового микроклимата и энергоэффективности здания. Мы проводим полный комплекс работ по обслуживанию вентиляционного оборудования всех типов."
@@ -78,6 +93,7 @@ export const Ventilation = () => (
 
 export const Heating = () => (
   <ServicePage
+    image={heatingImg}
     title="Обслуживание тепловых систем"
     description="Промывка теплообменников и обслуживание отопительного оборудования"
     details="Эффективная работа тепловых систем напрямую влияет на комфорт и затраты на энергоносители. Мы выполняем все виды работ по обслуживанию теплового оборудования, включая промывку теплообменников различных типов."
@@ -95,6 +111,7 @@ export const Heating = () => (
 
 export const DockDoors = () => (
   <ServicePage
+    image={dockImg}
     title="Обслуживание доковых ворот"
     description="Монтаж, ремонт и плановое обслуживание промышленных ворот"
     details="Доковые ворота — критически важный элемент логистической инфраструктуры. Мы обеспечиваем их надёжную и безопасную работу, проводя регулярное техническое обслуживание и оперативный ремонт."
@@ -112,6 +129,7 @@ export const DockDoors = () => (
 
 export const Electrical = () => (
   <ServicePage
+    image={electricalImg}
     title="Обслуживание электрических сетей"
     description="Диагностика, ремонт и модернизация электрических систем"
     details="Безопасность и надёжность электроснабжения — основа работы любого объекта. Наши электрики проводят полный комплекс работ по обслуживанию электрических сетей и оборудования."

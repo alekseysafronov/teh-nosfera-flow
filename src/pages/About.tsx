@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
 import { CheckCircle } from "lucide-react";
+import aboutImg from "@/assets/about.jpg";
 
 const values = [
   "Индивидуальный подход к каждому клиенту",
@@ -19,16 +20,23 @@ const About = () => (
       </div>
     </section>
     <section className="py-16">
-      <div className="container max-w-4xl space-y-6 text-muted-foreground leading-relaxed">
-        <p>
-          <strong className="text-foreground">ООО «ТЕХНОСФЕРА»</strong> — компания, специализирующаяся на комплексном техническом обслуживании и ремонте инженерных систем промышленных и коммерческих объектов.
-        </p>
-        <p>
-          Мы обеспечиваем бесперебойную работу очистных сооружений, вентиляционных установок, тепловых систем, доковых ворот и электрических сетей. Наша команда профессионалов готова решить задачи любой сложности.
-        </p>
-        <p>
-          Компанию возглавляет <strong className="text-foreground">Хмельков Дмитрий Викторович</strong>, директор с большим опытом работы в сфере инженерных систем.
-        </p>
+      <div className="container max-w-5xl grid md:grid-cols-2 gap-10 items-center">
+        <div className="space-y-6 text-muted-foreground leading-relaxed">
+          <p>
+            <strong className="text-foreground">ООО «ТЕХНОСФЕРА»</strong> — компания, специализирующаяся на комплексном техническом обслуживании и ремонте инженерных систем промышленных и коммерческих объектов.
+          </p>
+          <p>
+            Мы обеспечиваем бесперебойную работу очистных сооружений, вентиляционных установок, тепловых систем, доковых ворот и электрических сетей. Наша команда профессионалов готова решить задачи любой сложности.
+          </p>
+          <p>
+            Компанию возглавляет <strong className="text-foreground">Хмельков Дмитрий Викторович</strong>, директор с большим опытом работы в сфере инженерных систем.
+          </p>
+        </div>
+        <img src={aboutImg} alt="Команда Техносфера" loading="lazy" width={1280} height={768} className="rounded-xl shadow-md w-full h-auto" />
+      </div>
+    </section>
+    <section className="pb-16">
+      <div className="container max-w-4xl text-muted-foreground leading-relaxed">
 
         <h3 className="font-heading font-bold text-xl text-foreground pt-4">Наши принципы</h3>
         <ul className="space-y-3">
