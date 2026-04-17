@@ -37,8 +37,11 @@ const Footer = () => (
       </div>
     </div>
     <div className="border-t border-primary-foreground/10">
-      <div className="container py-4 text-center text-xs opacity-60">
-        © {new Date().getFullYear()} ООО «ТЕХНОСФЕРА». Все права защищены.
+      <div className="container py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs opacity-60">
+        <span>© {new Date().getFullYear()} ООО «ТЕХНОСФЕРА». Все права защищены.</span>
+        <Link to="/offer" className="hover:opacity-100 hover:underline transition-opacity">
+          Публичная оферта
+        </Link>
       </div>
     </div>
   </footer>
