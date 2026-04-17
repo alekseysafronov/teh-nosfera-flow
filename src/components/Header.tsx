@@ -74,22 +74,40 @@ const Header = () => {
           ))}
         </nav>
 
-        <a
-          href="tel:+79166568571"
-          className="hidden lg:flex items-center gap-2 font-heading font-extrabold text-2xl hover:opacity-80 transition-opacity"
-        >
-          <Phone className="w-6 h-6 text-secondary" />
-          <span className="text-secondary">916</span>
-          <span className="text-foreground">656-8571</span>
-        </a>
+        <div className="hidden lg:flex items-center gap-3">
+          <a
+            href="tel:+79166568571"
+            className="flex items-center gap-2 font-heading font-extrabold text-2xl hover:opacity-80 transition-opacity"
+          >
+            <Phone className="w-6 h-6 text-secondary" />
+            <span className="text-secondary">916</span>
+            <span className="text-foreground">656-8571</span>
+          </a>
+          <button
+            onClick={toggleTheme}
+            aria-label="Переключить тему"
+            className="p-2 rounded-md text-foreground hover:bg-accent transition-colors"
+          >
+            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
+        </div>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 text-foreground"
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile actions */}
+        <div className="flex items-center lg:hidden">
+          <button
+            onClick={toggleTheme}
+            aria-label="Переключить тему"
+            className="p-2 text-foreground"
+          >
+            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="p-2 text-foreground"
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
