@@ -6,7 +6,7 @@ import SectionTitle from "@/components/SectionTitle";
 import heroImg from "@/assets/hero.jpg";
 
 const services = [
-  { icon: Droplets, title: "Очистные сооружения", desc: "Техническое обслуживание и ремонт систем водоочистки и водоподготовки", path: "/services/water-treatment" },
+  { icon: Droplets, title: "Экспертиза инженерных систем", desc: "Профессиональная экспертиза, аудит и оценка состояния инженерных систем объекта", path: "/services/water-treatment" },
   { icon: Wind, title: "Вентиляционные установки", desc: "Сервис приточно-вытяжных систем вентиляции и кондиционирования", path: "/services/ventilation" },
   { icon: Zap, title: "Тепловые системы", desc: "Промывка теплообменников, обслуживание котельного оборудования", path: "/services/heating" },
   { icon: DoorOpen, title: "Доковые ворота", desc: "Монтаж, ремонт и регулярное обслуживание промышленных ворот", path: "/services/dock-doors" },
@@ -15,8 +15,7 @@ const services = [
 
 const advantages = [
   { num: "10+", label: "лет опыта" },
-  { num: "500+", label: "обслуженных объектов" },
-  { num: "24/7", label: "аварийный выезд" },
+  { num: "300+", label: "обслуженных объектов" },
   { num: "100%", label: "гарантия качества" },
 ];
 
@@ -61,7 +60,7 @@ const Index = () => (
 
     {/* Stats */}
     <section className="bg-primary py-10">
-      <div className="container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div className="container grid grid-cols-3 gap-6 text-center">
         {advantages.map((a) => (
           <div key={a.label}>
             <div className="font-heading font-extrabold text-3xl md:text-4xl text-primary-foreground">{a.num}</div>

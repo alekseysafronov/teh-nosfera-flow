@@ -4,7 +4,7 @@ import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const services = [
-  { title: "Обслуживание очистных сооружений", path: "/services/water-treatment" },
+  { title: "Экспертиза инженерных систем", path: "/services/water-treatment" },
   { title: "Обслуживание вентиляционных установок", path: "/services/ventilation" },
   { title: "Обслуживание тепловых систем", path: "/services/heating" },
   { title: "Обслуживание доковых ворот", path: "/services/dock-doors" },
