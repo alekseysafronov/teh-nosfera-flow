@@ -48,6 +48,45 @@
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
   }
+
+  .dark {
+    --background: 210 25% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 25% 11%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 25% 11%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 174 65% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 95% 58%;
+    --secondary-foreground: 210 25% 8%;
+
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 174 40% 18%;
+    --accent-foreground: 174 65% 80%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 174 65% 45%;
+
+    --sidebar-background: 210 25% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 174 65% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 174 40% 18%;
+    --sidebar-accent-foreground: 174 65% 80%;
+    --sidebar-border: 210 20% 20%;
+    --sidebar-ring: 174 65% 45%;
+  }
 }
 
 @layer base {
