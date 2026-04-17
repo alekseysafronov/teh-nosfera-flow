@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 
 const services = [
   { title: "Обслуживание очистных сооружений", path: "/services/water-treatment" },
@@ -28,9 +28,12 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b shadow-sm">
-      <div className="container flex items-center justify-between h-20">
-        <Link to="/" className="flex-shrink-0">
-          <img src={logo} alt="Техносфера" className="h-12 w-auto" />
+      <div className="container flex items-center justify-between gap-4 py-3">
+        <Link to="/" className="flex-shrink-0 flex flex-col items-start">
+          <img src={logo} alt="Техносфера" className="h-16 md:h-20 w-auto" />
+          <span className="mt-1 text-[11px] md:text-xs uppercase tracking-wider text-muted-foreground font-heading font-semibold">
+            Обслуживание инженерных систем
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -73,10 +76,11 @@ const Header = () => {
 
         <a
           href="tel:+79166568571"
-          className="hidden lg:flex items-center gap-2 font-heading font-bold text-lg text-foreground hover:text-primary transition-colors"
+          className="hidden lg:flex items-center gap-2 font-heading font-extrabold text-2xl hover:opacity-80 transition-opacity"
         >
-          <Phone className="w-5 h-5 text-secondary" />
-          +7 (916) 656-85-71
+          <Phone className="w-6 h-6 text-secondary" />
+          <span className="text-secondary">916</span>
+          <span className="text-foreground">656-8571</span>
         </a>
 
         {/* Mobile toggle */}
@@ -133,10 +137,11 @@ const Header = () => {
             ))}
             <a
               href="tel:+79166568571"
-              className="flex items-center gap-2 px-3 py-2.5 font-heading font-bold text-secondary"
+              className="flex items-center gap-2 px-3 py-2.5 font-heading font-extrabold text-xl"
             >
-              <Phone className="w-5 h-5" />
-              +7 (916) 656-85-71
+              <Phone className="w-5 h-5 text-secondary" />
+              <span className="text-secondary">916</span>
+              <span className="text-foreground">656-8571</span>
             </a>
           </div>
         </div>
