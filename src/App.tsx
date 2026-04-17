@@ -10,6 +10,7 @@ import { WaterTreatment, Ventilation, Heating, DockDoors, Electrical } from "./p
 import Equipment from "./pages/Equipment";
 import Contacts from "./pages/Contacts";
 import Requisites from "./pages/Requisites";
+import Offer from "./pages/Offer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/equipment" element={<Equipment />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/requisites" element={<Requisites />} />
+          <Route path="/offer" element={<Offer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
