@@ -16,10 +16,10 @@ interface ServicePageProps {
 
 const ServicePage = ({ title, description, features, details, image }: ServicePageProps) => (
   <Layout>
-    <section className="relative py-20 bg-foreground">
+    <section className="relative py-20 bg-[hsl(210_25%_8%)]">
       <div className="absolute inset-0">
         <img src={image} alt={title} className="w-full h-full object-cover opacity-30" width={1280} height={768} />
-        <div className="absolute inset-0 bg-foreground/60" />
+        <div className="absolute inset-0 bg-[hsl(210_25%_8%/0.6)]" />
       </div>
       <div className="container relative z-10">
         <h1 className="font-heading font-extrabold text-3xl md:text-4xl text-primary-foreground">{title}</h1>
