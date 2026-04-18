@@ -25,7 +25,7 @@ const Index = () => (
     <section className="relative h-[70vh] min-h-[500px] flex items-center">
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="absolute inset-0 bg-[hsl(210_25%_8%/0.7)]" />
       </div>
       <div className="container relative z-10">
         <motion.div
