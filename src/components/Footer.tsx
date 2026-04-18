@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => (
-  <footer className="bg-foreground text-primary-foreground">
+  <footer className="bg-[hsl(210_25%_10%)] text-[hsl(0_0%_95%)]">
     <div className="container py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <h3 className="font-heading font-bold text-lg mb-4">Техносфера</h3>
@@ -13,7 +13,7 @@ const Footer = () => (
       <div>
         <h3 className="font-heading font-bold text-lg mb-4">Услуги</h3>
         <ul className="space-y-2 text-sm opacity-80">
-          <li><Link to="/services/water-treatment" className="hover:opacity-100 transition-opacity">Очистные сооружения</Link></li>
+          <li><Link to="/services/water-treatment" className="hover:opacity-100 transition-opacity">Экспертиза инженерных систем</Link></li>
           <li><Link to="/services/ventilation" className="hover:opacity-100 transition-opacity">Вентиляционные установки</Link></li>
           <li><Link to="/services/heating" className="hover:opacity-100 transition-opacity">Тепловые системы</Link></li>
           <li><Link to="/services/dock-doors" className="hover:opacity-100 transition-opacity">Доковые ворота</Link></li>
@@ -36,8 +36,8 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="border-t border-primary-foreground/10">
-      <div className="container py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs opacity-60">
+    <div className="border-t border-white/10">
+      <div className="container py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs opacity-70">
         <span>© {new Date().getFullYear()} ООО «ТЕХНОСФЕРА». Все права защищены.</span>
         <Link to="/offer" className="hover:opacity-100 hover:underline transition-opacity">
           Публичная оферта
