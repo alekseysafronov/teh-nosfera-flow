@@ -37,11 +37,16 @@ const Footer = () => (
       </div>
     </div>
     <div className="border-t border-white/10">
-      <div className="container py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs opacity-70">
-        <span>© {new Date().getFullYear()} ООО «ТЕХНОСФЕРА». Все права защищены.</span>
-        <Link to="/offer" className="hover:opacity-100 hover:underline transition-opacity">
-          Публичная оферта
-        </Link>
+      <div className="container py-4 text-xs opacity-70 leading-relaxed">
+        <p className="mb-3">
+          Информация, представленная на сайте, носит исключительно информационный характер и не является публичной офертой, определяемой положениями ст. 437 ГК РФ.
+        </p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+          <span>© {new Date().getFullYear()} ООО «ТЕХНОСФЕРА». Все права защищены.</span>
+          <Link to="/offer" className="hover:opacity-100 hover:underline transition-opacity">
+            Публичная оферта
+          </Link>
+        </div>
       </div>
     </div>
   </footer>
