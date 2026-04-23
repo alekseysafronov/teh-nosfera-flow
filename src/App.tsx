@@ -11,7 +11,6 @@ import { WaterTreatment, Ventilation, Heating, DockDoors, Electrical } from "./p
 import Equipment from "./pages/Equipment";
 import Contacts from "./pages/Contacts";
 import Requisites from "./pages/Requisites";
-import Offer from "./pages/Offer";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
@@ -36,7 +35,6 @@ const App = () => (
             <Route path="/equipment" element={<Equipment />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/requisites" element={<Requisites />} />
-            <Route path="/offer" element={<Offer />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
