@@ -43,9 +43,14 @@ const Footer = () => (
         </p>
         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
           <span>© {new Date().getFullYear()} ООО «ТЕХНОСФЕРА». Все права защищены.</span>
-          <Link to="/offer" className="hover:opacity-100 hover:underline transition-opacity">
-            Публичная оферта
-          </Link>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <Link to="/offer" className="hover:opacity-100 hover:underline transition-opacity">
+              Публичная оферта
+            </Link>
+            <Link to="/privacy" className="hover:opacity-100 hover:underline transition-opacity">
+              Политика конфиденциальности
+            </Link>
+          </div>
         </div>
       </div>
     </div>
